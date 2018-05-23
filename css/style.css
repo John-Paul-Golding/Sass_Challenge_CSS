@@ -1,0 +1,73 @@
+/*Declare all variables & mixins on top*/
+/*importing my font style*/
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+/*Declare all mixins on top*/
+/*Styling begins here*/
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  font-size: 14px;
+  background-color: yellow;
+  font-family: "Varela Round", sans-serif; }
+
+section {
+  float: left;
+  width: 50%;
+  text-indent: 20px; }
+
+aside {
+  float: left;
+  width: 30%; }
+
+nav {
+  float: left;
+  width: 20%; }
+
+footer {
+  clear: both; }
+
+header, section, aside, nav, footer {
+  padding: 20px; }
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+  color: brown; }
+
+p {
+  text-align: left;
+  text-indent: 2px; }
+
+ul {
+  list-style: none; }
+
+/*Including my mixins for my classes and id's*/
+#heading1 {
+  text-align: center;
+  color: brown; }
+
+.heading2 {
+  color: brown; }
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #993300;
+  text-align: right;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  list-style-type: none; }
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+  list-style-type: none; }
+
+a:hover {
+  text-decoration: none;
+  color: blue;
+  background-color: white; }
+
+/*# sourceMappingURL=style.css.map */

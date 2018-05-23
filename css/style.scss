@@ -1,0 +1,119 @@
+/*Declare all variables & mixins on top*/
+$primaryColor: yellow;
+$primaryFontSize: 14px;
+$secondaryColor: #993300;
+$tertiaryColor: '#dddd';
+$fourthColor: #4CAF50;
+$fontFamily: 'Varela Round', sans-serif;
+/*importing my font style*/
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+/*Declare all mixins on top*/
+
+@mixin heading1{
+                text-align: center;
+                color: brown;
+}
+
+@mixin heading2{
+                color: brown;
+}
+
+@mixin navbar_a{
+                float: left;
+                display: block;
+                color: $secondaryColor;
+                text-align:right;
+                padding: 10px 10px;
+                text-decoration: none;
+                font-size: 17px;
+                list-style-type: none;
+}
+
+@mixin navbar_a_hover{
+                      background-color: $tertiaryColor;
+                      color: black;
+                      list-style-type: none;
+}
+
+@mixin navbar_a_active{
+                       background-color: $fourthColor;
+                       color: white;
+                       list-style-type: none;
+}
+
+@mixin a_hover{
+               text-decoration: none;
+               color:blue;
+               background-color: white;
+}
+
+/*Styling begins here*/
+body{
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  font-size: 14px;
+  background-color: $primaryColor;
+  font-family: $fontFamily;
+}
+
+section {
+  float: left;
+  width: 50%;
+  text-indent: 20px;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+  color: brown;
+}
+
+p{
+  text-align: left;
+  text-indent: 2px;
+}
+
+ul{
+  list-style: none;
+}
+
+/*Including my mixins for my classes and id's*/
+
+#heading1{
+  @include heading1
+}
+
+.heading2{
+  @include heading2
+}
+
+.navbar a{
+ @include navbar_a
+}
+
+.navbar a.active{
+  @include navbar_a_active
+}
+
+a:hover{
+  @include a_hover
+}
